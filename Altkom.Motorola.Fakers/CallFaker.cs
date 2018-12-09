@@ -8,7 +8,7 @@ namespace Altkom.Motorola.Fakers
 {
     public class CallFaker : Faker<Call>
     {
-        public CallFaker(List<Device> devices, List<Contact> contacts)
+        public CallFaker(IEnumerable<Device> devices, IEnumerable<Contact> contacts)
         {
             StrictMode(true);
             RuleFor(p => p.Id, f => f.IndexFaker);
