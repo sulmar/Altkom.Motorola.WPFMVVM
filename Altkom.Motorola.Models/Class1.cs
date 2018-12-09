@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Altkom.Motorola.IServices
+namespace Altkom.Motorola.Models
 {
     public class Class1
     {

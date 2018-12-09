@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.IServices", "Altkom.Motorola.IServices\Altkom.Motorola.IServices.csproj", "{185D99A3-A9A2-4216-A706-1CC6A15E882E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.FakeServices", "Altkom.Motorola.FakeServices\Altkom.Motorola.FakeServices.csproj", "{16BB674A-7F3A-480E-98B4-8A51E1A2CC42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.Models", "Altkom.Motorola.Models\Altkom.Motorola.Models.csproj", "{C192FE46-DF61-4276-88F8-E865355EBB27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.Fakers", "Altkom.Motorola.Fakers\Altkom.Motorola.Fakers.csproj", "{589EDB61-5C9D-407F-ABF1-A07E7125F3CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{185D99A3-A9A2-4216-A706-1CC6A15E882E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{185D99A3-A9A2-4216-A706-1CC6A15E882E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{185D99A3-A9A2-4216-A706-1CC6A15E882E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16BB674A-7F3A-480E-98B4-8A51E1A2CC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16BB674A-7F3A-480E-98B4-8A51E1A2CC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16BB674A-7F3A-480E-98B4-8A51E1A2CC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16BB674A-7F3A-480E-98B4-8A51E1A2CC42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C192FE46-DF61-4276-88F8-E865355EBB27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C192FE46-DF61-4276-88F8-E865355EBB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C192FE46-DF61-4276-88F8-E865355EBB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C192FE46-DF61-4276-88F8-E865355EBB27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589EDB61-5C9D-407F-ABF1-A07E7125F3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589EDB61-5C9D-407F-ABF1-A07E7125F3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589EDB61-5C9D-407F-ABF1-A07E7125F3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589EDB61-5C9D-407F-ABF1-A07E7125F3CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="25.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Altkom.Motorola.Fakers\Altkom.Motorola.Fakers.csproj" />
+    <ProjectReference Include="..\Altkom.Motorola.IServices\Altkom.Motorola.IServices.csproj" />
+    <ProjectReference Include="..\Altkom.Motorola.Models\Altkom.Motorola.Models.csproj" />
+  </ItemGroup>
+
+</Project>
