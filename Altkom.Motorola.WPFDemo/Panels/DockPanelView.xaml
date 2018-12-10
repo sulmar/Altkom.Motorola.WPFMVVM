@@ -1,0 +1,35 @@
+﻿<Window x:Class="Altkom.Motorola.WPFDemo.Panels.DockPanelView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Altkom.Motorola.WPFDemo.Panels"
+        mc:Ignorable="d"
+        Title="DockPanelView" Height="450" Width="800">
+    <Grid>
+
+        <DockPanel>
+            <Button Background="Blue"
+                Foreground="White"  
+                  DockPanel.Dock="Top"  
+                >Hello World 11111111</Button>
+
+            <Button Background="Green"
+                Foreground="White"  
+                    DockPanel.Dock="Bottom"
+                >Hello World 2</Button>
+
+            <Button Background="Yellow"
+                Foreground="White"  
+                    DockPanel.Dock="Left"
+                >Hello World 4</Button>
+
+            <Button Background="Red"
+                Foreground="White"              
+                >Hello World 3</Button>
+
+        </DockPanel>
+        
+        
+    </Grid>
+</Window>
