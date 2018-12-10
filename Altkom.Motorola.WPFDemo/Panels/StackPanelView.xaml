@@ -28,5 +28,12 @@
                 Foreground="White"                    
                 Margin="10"
                 >Hello World 3</Button>
+
+
+        <Line X1="10" Y1="20"
+                  X2="200" Y2="300"
+                  StrokeThickness="5"
+                  Stroke="Black"
+                  />
     </StackPanel>
 </Window>

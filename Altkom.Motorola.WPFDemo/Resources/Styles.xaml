@@ -1,0 +1,81 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Altkom.Motorola.WPFDemo.Resources"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+   
+    <LinearGradientBrush x:Key="MyBackgroundBrush"
+                        StartPoint="0,0"
+                        EndPoint="1,1">
+        <GradientStop Color="Yellow" Offset="0.5"  />
+        <GradientStop Color="Green" Offset="0.75" />
+        <GradientStop Color="Red" Offset="1" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="MyForegroundBrush" Color="White" />
+
+    <sys:Double x:Key="MyWidth">400</sys:Double>
+    <sys:Double x:Key="MyHeight">50</sys:Double>
+
+    <Style x:Key="MyButtonStyle" 
+               TargetType="Button">
+
+        <Setter Property="Background" Value="{StaticResource MyBackgroundBrush}"  />
+
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush 
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                    <GradientStop Color="Yellow" Offset="0.5" />
+                    <GradientStop Color="Green" Offset="0.75" />
+                    <GradientStop Color="Red" Offset="1" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Foreground" Value="{StaticResource MyForegroundBrush}" />
+        <Setter Property="Height" Value="{StaticResource MyHeight}" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Width" Value="100" />
+    </Style>
+
+    <SolidColorBrush x:Key="CancelBackgroundBrush" Color="Red" />
+
+    
+    <Style x:Key="MyCancelButtonStyle" 
+               TargetType="Button"
+               BasedOn="{StaticResource MyButtonStyle}"
+               >
+
+        <Setter Property="Background" Value="{StaticResource CancelBackgroundBrush}" />
+
+    </Style>
+
+   
+    <Style x:Key="BaseButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Aquamarine" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Width" Value="200" />
+    </Style>
+
+    <Style TargetType="Button" 
+               BasedOn="{StaticResource BaseButtonStyle}">
+    </Style>
+
+
+    <Style x:Key="CancelButtonStyle"
+               TargetType="Button"
+               BasedOn="{StaticResource BaseButtonStyle}" >
+
+        <Setter Property="Background" Value="Red" />
+
+    </Style>
+
+    <!--<Style 
+            TargetType="Button"
+            BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="Green" />
+    </Style>-->
+    
+</ResourceDictionary>

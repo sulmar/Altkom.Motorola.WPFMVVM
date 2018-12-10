@@ -55,6 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Basic\ContentControlViewxaml.xaml.cs">
+      <DependentUpon>ContentControlViewxaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\ElementBindingView.xaml.cs">
+      <DependentUpon>ElementBindingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\StyleView.xaml.cs">
+      <DependentUpon>StyleView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Basic\ContentControlViewxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bindings\ElementBindingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +84,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Panels\CanvasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Panels\DockPanelView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -79,12 +100,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Panels\UniformGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Panels\WrapPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\StyleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Panels\CanvasView.xaml.cs">
+      <DependentUpon>CanvasView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Panels\DockPanelView.xaml.cs">
       <DependentUpon>DockPanelView.xaml</DependentUpon>
     </Compile>
@@ -93,6 +129,9 @@
     </Compile>
     <Compile Include="Panels\StackPanelView.xaml.cs">
       <DependentUpon>StackPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\UniformGridView.xaml.cs">
+      <DependentUpon>UniformGridView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Panels\WrapPanelView.xaml.cs">
       <DependentUpon>WrapPanelView.xaml</DependentUpon>
