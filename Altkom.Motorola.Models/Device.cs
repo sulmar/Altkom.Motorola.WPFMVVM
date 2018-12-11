@@ -11,5 +11,8 @@ namespace Altkom.Motorola.Models
         public string Color { get; set; }
         public virtual ICollection<Call> Calls { get; set; }
 
+
+        // public override string ToString() => $"{Name} {Model}";
+
     }
 }

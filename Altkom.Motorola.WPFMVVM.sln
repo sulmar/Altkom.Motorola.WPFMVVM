@@ -13,6 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.Motorola.Fakers", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.WPFDemo", "Altkom.Motorola.WPFDemo\Altkom.Motorola.WPFDemo.csproj", "{B81A3294-28AD-407A-B122-16E514EF369D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.WPFClient", "Altkom.Motorola.WPFClient\Altkom.Motorola.WPFClient.csproj", "{3ED892FD-C111-4F31-9085-5FF1C48D684A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.ViewModels", "Altkom.Motorola.ViewModels\Altkom.Motorola.ViewModels.csproj", "{F9286A6E-297C-4C1D-B4ED-23E9B37D8FDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.Framework", "Altkom.Motorola.Framework\Altkom.Motorola.Framework.csproj", "{0605EA4B-4DF7-471F-B54D-9E957CA56328}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +45,18 @@ Global
 		{B81A3294-28AD-407A-B122-16E514EF369D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B81A3294-28AD-407A-B122-16E514EF369D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B81A3294-28AD-407A-B122-16E514EF369D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ED892FD-C111-4F31-9085-5FF1C48D684A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED892FD-C111-4F31-9085-5FF1C48D684A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED892FD-C111-4F31-9085-5FF1C48D684A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED892FD-C111-4F31-9085-5FF1C48D684A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9286A6E-297C-4C1D-B4ED-23E9B37D8FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9286A6E-297C-4C1D-B4ED-23E9B37D8FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9286A6E-297C-4C1D-B4ED-23E9B37D8FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9286A6E-297C-4C1D-B4ED-23E9B37D8FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0605EA4B-4DF7-471F-B54D-9E957CA56328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0605EA4B-4DF7-471F-B54D-9E957CA56328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0605EA4B-4DF7-471F-B54D-9E957CA56328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0605EA4B-4DF7-471F-B54D-9E957CA56328}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,103 @@
+﻿<Window x:Class="Altkom.Motorola.WPFClient.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Altkom.Motorola.WPFClient.Views"
+        xmlns:vm="clr-namespace:Altkom.Motorola.ViewModels;assembly=Altkom.Motorola.ViewModels"
+        DataContext="{Binding Source={StaticResource Locator}, Path=ShellViewModel}"
+        mc:Ignorable="d"
+        Title="ShellView" Height="450" Width="800">
+
+    <!--<Window.DataContext>
+        <vm:ShellViewModel />
+    </Window.DataContext>-->
+    
+    <Grid>
+
+        <DockPanel>
+
+            <!-- Header -->
+            
+            <ContentControl 
+                BorderBrush="Black"                
+                BorderThickness="1"
+                    DockPanel.Dock="Top">
+
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                      <!--<Image Width="80" Source="/Assets/motorola-solution-logo.png" />-->
+                      <!--<Image Width="80" Source="{StaticResource LogoImage}" />-->
+                        <Image Style="{StaticResource LogoImageStyle}" />
+
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal">
+                        <Button Command="{Binding Load}">Devices</Button>
+                        <Button>Contacts</Button>
+                        <Button Style="{StaticResource CallsButtonStyle}">Calls</Button>
+                    </StackPanel>
+                </DockPanel>
+
+            </ContentControl>
+
+
+
+            <Border 
+                BorderBrush="Black"
+               
+                BorderThickness="1"
+                    DockPanel.Dock="Bottom">
+
+                <Border>
+
+                    <DockPanel>
+                        <TextBlock Text="{Binding Path=IsConnected}" />
+                        <TextBlock DockPanel.Dock="Right" Text="version 1.0.0" />
+                        <ContentControl />
+                    </DockPanel>
+                    
+                    
+                </Border>
+
+            </Border>
+
+            <Border 
+                BorderBrush="Black"                 
+                BorderThickness="1">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0">
+                        <!--<ListBox ItemsSource="{Binding Devices}"
+                                 ItemTemplate="{StaticResource DeviceTemplate}"
+                                 />-->
+
+                        <ListBox 
+                            ItemsSource="{Binding Devices}"
+                            SelectedItem="{Binding SelectedDevice}"
+                                 
+                                 />
+                    </Border>
+
+                    <Border Grid.Column="1">
+                        <StackPanel DataContext="{Binding SelectedDevice}">
+                            <TextBox Text="{Binding Model}" />
+                            <TextBox Text="{Binding Firmware}" />
+                            <TextBox Text="{Binding Color}" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+               
+               
+            </Border>
+
+        </DockPanel>
+        
+    </Grid>
+</Window>
