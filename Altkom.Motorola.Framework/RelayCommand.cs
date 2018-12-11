@@ -25,7 +25,7 @@ namespace Altkom.Motorola.Framework
 
         public bool CanExecute(object parameter) => canExecute?.Invoke(parameter) ?? true;
         
-        public void Execute(object parameter) => execute.Invoke(parameter);
+        public void Execute(object parameter) => execute(parameter);
 
         // return canExecute == null || canExecute.Invoke(parameter);
 
