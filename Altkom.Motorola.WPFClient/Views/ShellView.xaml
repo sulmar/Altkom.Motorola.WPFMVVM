@@ -3,8 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:local="clr-namespace:Altkom.Motorola.WPFClient.Views"
         xmlns:vm="clr-namespace:Altkom.Motorola.ViewModels;assembly=Altkom.Motorola.ViewModels"
+        xmlns:b="clr-namespace:Altkom.Motorola.WPFClient.Behaviors"
+        xmlns:me="clr-namespace:Altkom.Motorola.WPFClient.MarkupExtensions"
         DataContext="{Binding Source={StaticResource Locator}, Path=ShellViewModel}"
         mc:Ignorable="d"
         Title="ShellView" Height="450" Width="800">
@@ -36,6 +39,20 @@
                         <Button Command="{Binding LoadCommand}">Devices</Button>
                         <Button>Contacts</Button>
                         <Button Style="{StaticResource CallsButtonStyle}">Calls</Button>
+                        <Button Command="{Binding UpdateCommand}" Content="Update">
+                            <i:Interaction.Behaviors>
+                                <b:ButtonBehavior Width="{Binding MyWidth}"  />
+                            </i:Interaction.Behaviors>
+                        </Button>
+                        <Button Command="{Binding RemoveCommand}" 
+                                
+                                Content="Remove">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseRightButtonDown">
+                                    <i:InvokeCommandAction Command="{Binding RemoveCommand}" />
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
                     </StackPanel>
                 </DockPanel>
 
@@ -53,7 +70,8 @@
 
                     <DockPanel>
                         <TextBlock Text="{Binding Path=IsConnected}" />
-                        <TextBlock DockPanel.Dock="Right" Text="version 1.0.0" />
+                        <Label DockPanel.Dock="Right" Content="{me:CurrentDate}" />
+                        <Label DockPanel.Dock="Right" Content="{me:VersionMarkup}" />
                         <ContentControl />
                     </DockPanel>
                     
@@ -78,7 +96,7 @@
                                  />-->
 
                         <ListBox 
-                            ItemsSource="{Binding Devices}"
+                            ItemsSource="{Binding DevicesXXXXXX}"
                             SelectedItem="{Binding SelectedDevice}"
                                  
                                  />
@@ -86,7 +104,7 @@
 
                     <Border Grid.Column="1">
                         <StackPanel DataContext="{Binding SelectedDevice}">
-                            <TextBox Text="{Binding Model}" />
+                            <TextBox Text="{Binding Model, UpdateSourceTrigger=PropertyChanged}" />
                             <TextBox Text="{Binding Firmware}" />
                             <TextBox Text="{Binding Color}" />
                         </StackPanel>

@@ -10,11 +10,19 @@
         <Setter Property="Source" Value="{StaticResource LogoImage}" />
     </Style>
 
+    <!--<ControlTemplate x:Key="ButtonTemplate">
+        <ContentPresenter>
+            --><!-- behavior --><!--
+        </ContentPresenter>
+
+    </ControlTemplate>-->
+    
     <Style x:Key="BaseButtonStyle" TargetType="Button">
         <Setter Property="Width" Value="100" />
         <Setter Property="Height" Value="50" />
         <Setter Property="Margin" Value="5" />
         <Setter Property="Background" Value="Green" />
+        
     </Style>
 
     <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}" />
