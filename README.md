@@ -13,7 +13,11 @@ Przykłady ze szkolenia WPF MVVM
 | Altkom.Motorola.Models  | Model danych   |
 
 
+## Linki
+Markup Extension EventToCommand
+http://blogs.microsoft.co.il/pavely/2012/04/07/wpf-45-markup-extension-for-events/
 
-## Przydatne
+
+## VS Extensions
 - VSColorOutput - kolorowy output
 
