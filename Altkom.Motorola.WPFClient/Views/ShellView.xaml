@@ -8,9 +8,14 @@
         xmlns:vm="clr-namespace:Altkom.Motorola.ViewModels;assembly=Altkom.Motorola.ViewModels"
         xmlns:b="clr-namespace:Altkom.Motorola.WPFClient.Behaviors"
         xmlns:me="clr-namespace:Altkom.Motorola.WPFClient.MarkupExtensions"
+        xmlns:c="clr-namespace:Altkom.Motorola.WPFClient.Converters"
         DataContext="{Binding Source={StaticResource Locator}, Path=ShellViewModel}"
         mc:Ignorable="d"
         Title="ShellView" Height="450" Width="800">
+
+    <Window.Resources>
+        <c:BoolToBrushConverter x:Key="MyConverter" />
+    </Window.Resources>
 
     <!--<Window.DataContext>
         <vm:ShellViewModel />
@@ -53,6 +58,8 @@
                                 </i:EventTrigger>
                             </i:Interaction.Triggers>
                         </Button>
+
+                        <Button Command="{Binding OnOffCommand}" Content="On/Off"/>
                     </StackPanel>
                 </DockPanel>
 
@@ -66,9 +73,11 @@
                 BorderThickness="1"
                     DockPanel.Dock="Bottom">
 
-                <Border>
+                <Border Background="{Binding IsConnected, Converter={StaticResource MyConverter}}">
 
-                    <DockPanel>
+                    <DockPanel Background="{Binding IsConnected, Converter={c:BoolToBrushConverter}}"
+                        
+                        >
                         <TextBlock Text="{Binding Path=IsConnected}" />
                         <Label DockPanel.Dock="Right" Content="{me:CurrentDate}" />
                         <Label DockPanel.Dock="Right" Content="{me:VersionMarkup}" />
@@ -96,7 +105,7 @@
                                  />-->
 
                         <ListBox 
-                            ItemsSource="{Binding DevicesXXXXXX}"
+                            ItemsSource="{Binding Devices}"
                             SelectedItem="{Binding SelectedDevice}"
                                  
                                  />

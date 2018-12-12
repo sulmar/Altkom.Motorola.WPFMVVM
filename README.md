@@ -13,3 +13,7 @@ Przykłady ze szkolenia WPF MVVM
 | Altkom.Motorola.Models  | Model danych   |
 
 
+
+## Przydatne
+- VSColorOutput - kolorowy output
+

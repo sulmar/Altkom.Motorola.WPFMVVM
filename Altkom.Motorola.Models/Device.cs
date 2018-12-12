@@ -11,7 +11,7 @@ namespace Altkom.Motorola.Models
         public string Name { get; set; }
         public string Model { get; set; }
         public string Firmware { get; set; }
-        public string Description { get; set; }
+        public string Description { get; set; }        
 
         private string _color;
         public string Color

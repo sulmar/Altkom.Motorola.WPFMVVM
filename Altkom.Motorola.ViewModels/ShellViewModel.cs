@@ -13,7 +13,16 @@ namespace Altkom.Motorola.ViewModels
 
         public double MyWidth { get; set; } = 100;
 
-        public bool IsConnected { get; private set; }
+
+        public bool IsConnected
+        {
+            get => _isConnected;
+            set
+            {
+                _isConnected = value;
+                OnPropertyChanged();
+            }
+        }
 
         private Device _selectedDevice;
         public Device SelectedDevice
@@ -24,14 +33,16 @@ namespace Altkom.Motorola.ViewModels
                 _selectedDevice = value;
                 OnPropertyChanged();
 
-                
+
                 UpdateCommand.OnCanExecuteChanged();
                 RemoveCommand.OnCanExecuteChanged();
-                
+
             }
         }
 
         private ObservableCollection<Device> _devices;
+        private bool _isConnected;
+
         public ObservableCollection<Device> Devices
         {
             get => _devices;
@@ -59,6 +70,7 @@ namespace Altkom.Motorola.ViewModels
         public ICommand LoadCommand { get; private set; }
         public RelayCommand UpdateCommand { get; private set; }
         public RelayCommand RemoveCommand { get; private set; }
+        public RelayCommand OnOffCommand { get; private set; }
 
         private readonly IDevicesService devicesService;
 
@@ -72,10 +84,11 @@ namespace Altkom.Motorola.ViewModels
             LoadCommand = new RelayCommand(p => Load(), p => CanLoad);
             UpdateCommand = new RelayCommand(p => Update(), p => IsSelectedDevice);
             RemoveCommand = new RelayCommand(p => Remove(), p => IsSelectedDevice);
-            
+            OnOffCommand = new RelayCommand(p => OnOff());
+
             IsConnected = true;
 
-            
+
 
             // Load();
         }
@@ -95,13 +108,19 @@ namespace Altkom.Motorola.ViewModels
             SelectedDevice.Color = "Red";
             SelectedDevice.Name = "Moje radio";
 
-            
+
         }
 
         public void Remove() => Devices.Remove(SelectedDevice);
 
 
-        
+        public void OnOff()
+        {
+            IsConnected = !IsConnected;
+        }
+
+
+
 
     }
 }

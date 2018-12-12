@@ -69,6 +69,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Behaviors\ButtonBehavior.cs" />
+    <Compile Include="Converters\BoolToBrushConverter.cs" />
     <Compile Include="MarkupExtensions\CurrentDate.cs" />
     <Compile Include="MarkupExtensions\VersionMarkupExtension.cs" />
     <Compile Include="Views\ShellView.xaml.cs">
