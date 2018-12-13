@@ -24,34 +24,35 @@ namespace Altkom.Motorola.ViewModels
             }
         }
 
-        private Device _selectedDevice;
-        public Device SelectedDevice
-        {
-            get => _selectedDevice;
-            set
-            {
-                _selectedDevice = value;
-                OnPropertyChanged();
+        //private Device _selectedDevice;
+        //public Device SelectedDevice
+        //{
+        //    get => _selectedDevice;
+        //    set
+        //    {
+        //        _selectedDevice = value;
+        //        OnPropertyChanged();
 
 
-                UpdateCommand.OnCanExecuteChanged();
-                RemoveCommand.OnCanExecuteChanged();
+        //        UpdateCommand.OnCanExecuteChanged();
+        //        RemoveCommand.OnCanExecuteChanged();
 
-            }
-        }
+        //    }
+        //}
 
-        private ObservableCollection<Device> _devices;
         private bool _isConnected;
 
-        public ObservableCollection<Device> Devices
-        {
-            get => _devices;
-            set
-            {
-                _devices = value;
-                OnPropertyChanged();
-            }
-        }
+
+        //private ObservableCollection<Device> _devices;
+        //public ObservableCollection<Device> Devices
+        //{
+        //    get => _devices;
+        //    set
+        //    {
+        //        _devices = value;
+        //        OnPropertyChanged();
+        //    }
+        //}
 
         //private ICommand _LoadCommand;
         //public ICommand LoadCommand
@@ -72,18 +73,18 @@ namespace Altkom.Motorola.ViewModels
         public RelayCommand RemoveCommand { get; private set; }
         public RelayCommand OnOffCommand { get; private set; }
 
-        private readonly IDevicesService devicesService;
+       // private readonly IDevicesService devicesService;
 
-        public bool IsSelectedDevice => SelectedDevice != null;
+       //  public bool IsSelectedDevice => SelectedDevice != null;
 
 
         public ShellViewModel(IDevicesService devicesService)
         {
-            this.devicesService = devicesService;
+          //  this.devicesService = devicesService;
 
             LoadCommand = new RelayCommand(p => Load(), p => CanLoad);
-            UpdateCommand = new RelayCommand(p => Update(), p => IsSelectedDevice);
-            RemoveCommand = new RelayCommand(p => Remove(), p => IsSelectedDevice);
+           // UpdateCommand = new RelayCommand(p => Update(), p => IsSelectedDevice);
+         //   RemoveCommand = new RelayCommand(p => Remove(), p => IsSelectedDevice);
             OnOffCommand = new RelayCommand(p => OnOff());
 
             IsConnected = true;
@@ -95,9 +96,9 @@ namespace Altkom.Motorola.ViewModels
 
         private void Load()
         {
-            Devices = new ObservableCollection<Device>(devicesService.Get());
+            // Devices = new ObservableCollection<Device>(devicesService.Get());
 
-            SelectedDevice = Devices.FirstOrDefault();
+          //  SelectedDevice = Devices.FirstOrDefault();
         }
 
         private bool CanLoad => IsConnected;
@@ -105,13 +106,13 @@ namespace Altkom.Motorola.ViewModels
 
         public void Update()
         {
-            SelectedDevice.Color = "Red";
-            SelectedDevice.Name = "Moje radio";
+            //SelectedDevice.Color = "Red";
+            //SelectedDevice.Name = "Moje radio";
 
 
         }
 
-        public void Remove() => Devices.Remove(SelectedDevice);
+        // public void Remove() => Devices.Remove(SelectedDevice);
 
 
         public void OnOff()

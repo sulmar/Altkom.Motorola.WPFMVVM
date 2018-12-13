@@ -70,8 +70,21 @@
     </Compile>
     <Compile Include="Behaviors\ButtonBehavior.cs" />
     <Compile Include="Converters\BoolToBrushConverter.cs" />
+    <Compile Include="Converters\ConcatMultiConverter.cs" />
     <Compile Include="MarkupExtensions\CurrentDate.cs" />
     <Compile Include="MarkupExtensions\VersionMarkupExtension.cs" />
+    <Compile Include="UserControls\NumericPanel.xaml.cs">
+      <DependentUpon>NumericPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactsView.xaml.cs">
+      <DependentUpon>ContactsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DevicesView.xaml.cs">
+      <DependentUpon>DevicesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeviceView.xaml.cs">
+      <DependentUpon>DeviceView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
@@ -109,6 +122,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\NumericPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ContactsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DevicesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DeviceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

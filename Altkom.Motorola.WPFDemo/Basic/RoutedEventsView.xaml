@@ -1,0 +1,53 @@
+﻿<Window x:Class="Altkom.Motorola.WPFDemo.Basic.RoutedEventsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Altkom.Motorola.WPFDemo.Basic"
+        mc:Ignorable="d"
+        Title="RoutedEventsView" Height="450" Width="800">
+    <Grid>
+
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="Green" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="FontSize" Value="50" />
+            </Style>
+        </Grid.Resources>
+
+        <!--<UniformGrid>
+            <Button Click="Button_Click">1</Button>
+            <Button Click="Button_Click">2</Button>
+            <Button Click="Button_Click">3</Button>
+            <Button Click="Button_Click">4</Button>
+            <Button>5</Button>
+            <Button>6</Button>
+            <Button>7</Button>
+            <Button>8</Button>
+            <Button>9</Button>
+        </UniformGrid>-->
+
+        <UniformGrid Button.Click="Button_Click" >
+            <Button>1</Button>
+            <Button>2</Button>
+            <Button>3</Button>
+            <Button>4</Button>
+            <Button>5</Button>
+            <Button>6</Button>
+            <Button Click="Button_Click_7">7</Button>
+            <Button>8</Button>
+            <Label>Hello</Label>
+            <Button PreviewMouseDown="Button_PreviewMouseDown" >
+                <StackPanel Orientation="Horizontal">
+                    <Button>9A</Button>
+                    <Button>9B</Button>
+                </StackPanel>
+                
+            </Button>
+        </UniformGrid>
+
+
+    </Grid>
+</Window>

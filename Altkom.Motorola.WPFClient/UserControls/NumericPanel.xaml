@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Altkom.Motorola.WPFClient.UserControls.NumericPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Altkom.Motorola.WPFClient.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.Resources>
+            <ControlTemplate x:Key="NumericButtonTemplate" TargetType="Button">
+                <Grid>
+                    <Ellipse Fill="{TemplateBinding Background}"
+                             Stroke="{TemplateBinding BorderBrush}" />
+
+                    <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center" />
+                </Grid>
+            </ControlTemplate>
+
+            <Style TargetType="Button" >
+                <Setter Property="Template" Value="{StaticResource NumericButtonTemplate}" />
+                <Setter Property="Width" Value="120" />
+                <Setter Property="Height" Value="120" />
+                <Setter Property="Background" Value="Blue" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="FontSize" Value="30" />
+            </Style>
+        </Grid.Resources>
+        
+        
+        <UniformGrid Button.Click="Button_Click" >
+            <Button Tag="1">N1</Button>
+            <Button Tag="2">N2</Button>
+            <Button Tag="3">N3</Button>
+            <Button Tag="4">N4</Button>
+            <Button Tag="5">N5</Button>
+            <Button Tag="6">N6</Button>
+            <Button Tag="7">N7</Button>
+            <Button Tag="8">N8</Button>
+            <Button Tag="9">N9</Button>
+        </UniformGrid>
+    </Grid>
+</UserControl>

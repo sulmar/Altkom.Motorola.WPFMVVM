@@ -17,6 +17,8 @@ namespace Altkom.Motorola.Fakers
             RuleFor(p => p.Firmware, f => f.System.Version().ToString());
             RuleFor(p => p.Description, f => f.Lorem.Paragraph(1));
             RuleFor(p => p.Color, f => f.Commerce.Color());
+            RuleFor(p => p.IsPowerOn, f => f.Random.Bool(0.8f));
+            RuleFor(p => p.Status, f => f.PickRandom<DeviceStatus>());
             Ignore(p => p.Calls);
             FinishWith((f, device) => Debug.WriteLine($"Device was created. Id = {device.Id} {device.Name}")); ;
         }

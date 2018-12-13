@@ -58,13 +58,23 @@
     <Compile Include="Basic\ContentControlViewxaml.xaml.cs">
       <DependentUpon>ContentControlViewxaml.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Basic\RoutedEventsView.xaml.cs">
+      <DependentUpon>RoutedEventsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Bindings\ElementBindingView.xaml.cs">
       <DependentUpon>ElementBindingView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Styles\StyleView.xaml.cs">
       <DependentUpon>StyleView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Templates\ControlTemplateView.xaml.cs">
+      <DependentUpon>ControlTemplateView.xaml</DependentUpon>
+    </Compile>
     <Page Include="Basic\ContentControlViewxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Basic\RoutedEventsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\StyleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Templates\ControlTemplateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

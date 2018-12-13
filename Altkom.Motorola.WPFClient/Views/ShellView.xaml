@@ -9,6 +9,7 @@
         xmlns:b="clr-namespace:Altkom.Motorola.WPFClient.Behaviors"
         xmlns:me="clr-namespace:Altkom.Motorola.WPFClient.MarkupExtensions"
         xmlns:c="clr-namespace:Altkom.Motorola.WPFClient.Converters"
+        xmlns:uc="clr-namespace:Altkom.Motorola.WPFClient.UserControls"
         DataContext="{Binding Source={StaticResource Locator}, Path=ShellViewModel}"
         mc:Ignorable="d"
         Title="ShellView" Height="450" Width="800">
@@ -100,23 +101,16 @@
                     </Grid.ColumnDefinitions>
 
                     <Border Grid.Column="0">
-                        <!--<ListBox ItemsSource="{Binding Devices}"
-                                 ItemTemplate="{StaticResource DeviceTemplate}"
-                                 />-->
+                        
+                        <Frame Source="DevicesView.xaml" />
 
-                        <ListBox 
-                            ItemsSource="{Binding Devices}"
-                            SelectedItem="{Binding SelectedDevice}"
-                                 
-                                 />
                     </Border>
 
                     <Border Grid.Column="1">
-                        <StackPanel DataContext="{Binding SelectedDevice}">
-                            <TextBox Text="{Binding Model, UpdateSourceTrigger=PropertyChanged}" />
-                            <TextBox Text="{Binding Firmware}" />
-                            <TextBox Text="{Binding Color}" />
-                        </StackPanel>
+
+                        <Frame Source="DeviceView.xaml" />
+                        
+                        
                     </Border>
                 </Grid>
 

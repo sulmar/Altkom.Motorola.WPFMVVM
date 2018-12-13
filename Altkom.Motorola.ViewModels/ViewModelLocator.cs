@@ -32,6 +32,8 @@ namespace Altkom.Motorola.ViewModels
         {
             IUnityContainer container = new UnityContainer();
             container.RegisterType<ShellViewModel>();
+            container.RegisterType<DevicesViewModel>();
+            container.RegisterType<DeviceViewModel>();
             container.RegisterType<IDevicesService, FakeDevicesService>();
 
             ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(container));
@@ -41,6 +43,8 @@ namespace Altkom.Motorola.ViewModels
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<ShellViewModel>();
+            builder.RegisterType<DevicesViewModel>();
+            builder.RegisterType<DeviceViewModel>();
             builder.RegisterType<FakeDevicesService>().As<IDevicesService>();
 
             var container = builder.Build();
@@ -56,5 +60,7 @@ namespace Altkom.Motorola.ViewModels
         // public ShellViewModel ShellViewModel => container.Resolve<ShellViewModel>();
 
         public ShellViewModel ShellViewModel => ServiceLocator.Current.GetInstance<ShellViewModel>();
+        public DevicesViewModel DevicesViewModel => ServiceLocator.Current.GetInstance<DevicesViewModel>();
+        public DeviceViewModel DeviceViewModel => ServiceLocator.Current.GetInstance<DeviceViewModel>();
     }
 }

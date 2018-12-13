@@ -1,0 +1,43 @@
+﻿<Window x:Class="Altkom.Motorola.WPFDemo.Templates.ControlTemplateView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Altkom.Motorola.WPFDemo.Templates"
+        mc:Ignorable="d"
+        Title="ControlTemplateView" Height="450" Width="800">
+    <Grid>
+
+        <Grid.Resources>
+            <ControlTemplate TargetType="Button"
+                x:Key="MyButtonTemplate">
+
+                <Border BorderBrush="{TemplateBinding Foreground}"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="2"
+                        CornerRadius="20"
+                        >
+                    
+                    <ContentPresenter                             
+                            HorizontalAlignment="Center"                                      
+                            VerticalAlignment="Center"/>
+                    
+                    
+                </Border>
+            </ControlTemplate>
+        </Grid.Resources>
+
+        <Button Foreground="Green"
+                Background="Transparent"
+            Template="{StaticResource MyButtonTemplate}"
+            Width="200"
+            Height="100"                
+                >
+
+            <Grid>
+                <Button>rerwrwe</Button>
+            </Grid>
+            
+        </Button>
+    </Grid>
+</Window>

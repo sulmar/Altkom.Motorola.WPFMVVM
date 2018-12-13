@@ -34,5 +34,17 @@ namespace Altkom.Motorola.Models
 
         // public override string ToString() => $"{Name} {Model}";
 
+        public bool IsPowerOn { get; set; }
+
+        public DeviceStatus Status { get; set; }
+
+    }
+
+
+    public enum DeviceStatus
+    {
+        Ready,
+        PrivateCalling,
+        GroupCalling
     }
 }
