@@ -1,16 +1,17 @@
 ﻿using Altkom.Motorola.Models;
 using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace Altkom.Motorola.IServices
 {
-    public interface IContactsService
+    
+
+    public interface IContactsService : IItemsService<Contact>
+    {     
+    }
+
+    public interface ICallsService : IItemsService<Call>
     {
-        ICollection<Contact> Get();
-        Contact Get(int id);
-        void Add(Contact contact);
-        void Update(Contact contact);
-        void Remove(int id);
+
     }
 }

@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.ViewModels"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.Framework", "Altkom.Motorola.Framework\Altkom.Motorola.Framework.csproj", "{0605EA4B-4DF7-471F-B54D-9E957CA56328}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.MVVMLightDemo", "Altkom.Motorola.MVVMLightDemo\Altkom.Motorola.MVVMLightDemo.csproj", "{2EA580EA-B127-48F9-9F7C-7B5B670A7935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.Motorola.ConsoleClient", "Altkom.Motorola.ConsoleClient\Altkom.Motorola.ConsoleClient.csproj", "{FA30A6D9-5B2D-4C6C-AE33-AEE1A2FDD0CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{0605EA4B-4DF7-471F-B54D-9E957CA56328}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0605EA4B-4DF7-471F-B54D-9E957CA56328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0605EA4B-4DF7-471F-B54D-9E957CA56328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA580EA-B127-48F9-9F7C-7B5B670A7935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA580EA-B127-48F9-9F7C-7B5B670A7935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA580EA-B127-48F9-9F7C-7B5B670A7935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA580EA-B127-48F9-9F7C-7B5B670A7935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA30A6D9-5B2D-4C6C-AE33-AEE1A2FDD0CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA30A6D9-5B2D-4C6C-AE33-AEE1A2FDD0CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA30A6D9-5B2D-4C6C-AE33-AEE1A2FDD0CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA30A6D9-5B2D-4C6C-AE33-AEE1A2FDD0CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

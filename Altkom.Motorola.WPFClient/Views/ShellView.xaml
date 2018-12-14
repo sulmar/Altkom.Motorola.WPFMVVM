@@ -42,8 +42,8 @@
                     </StackPanel>
                     
                     <StackPanel Orientation="Horizontal">
-                        <Button Command="{Binding LoadCommand}">Devices</Button>
-                        <Button>Contacts</Button>
+                        <Button Command="{Binding LoadCommand}" Background="#FF069E06">Devices</Button>
+                        <Button Command="{Binding ContactsCommand}" >Contacts</Button>
                         <Button Style="{StaticResource CallsButtonStyle}">Calls</Button>
                         <Button Command="{Binding UpdateCommand}" Content="Update">
                             <i:Interaction.Behaviors>
@@ -102,7 +102,7 @@
 
                     <Border Grid.Column="0">
                         
-                        <Frame x:Name="LeftFrame" Source="DevicesView.xaml" />
+                        <Frame x:Name="LeftFrame" />
 
                     </Border>
 

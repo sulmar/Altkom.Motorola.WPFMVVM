@@ -43,48 +43,26 @@ namespace Altkom.Motorola.ViewModels
         private bool _isConnected;
 
 
-        //private ObservableCollection<Device> _devices;
-        //public ObservableCollection<Device> Devices
-        //{
-        //    get => _devices;
-        //    set
-        //    {
-        //        _devices = value;
-        //        OnPropertyChanged();
-        //    }
-        //}
-
-        //private ICommand _LoadCommand;
-        //public ICommand LoadCommand
-        //{
-        //    get
-        //    {
-        //        if (_LoadCommand == null)
-        //        {
-        //            _LoadCommand = new RelayCommand(p => Load(), p => CanLoad);
-        //        }
-
-        //        return _LoadCommand;
-        //    }
-        //}
+        
 
         public ICommand LoadCommand { get; private set; }
+
+        public ICommand ContactsCommand { get; set; }
         public RelayCommand UpdateCommand { get; private set; }
         public RelayCommand RemoveCommand { get; private set; }
         public RelayCommand OnOffCommand { get; private set; }
 
-       // private readonly IDevicesService devicesService;
+        private readonly INavigationService navigationService;
 
-       //  public bool IsSelectedDevice => SelectedDevice != null;
-
-
-        public ShellViewModel(IDevicesService devicesService)
+        public ShellViewModel(INavigationService navigationService)
         {
-          //  this.devicesService = devicesService;
+            this.navigationService = navigationService;
 
             LoadCommand = new RelayCommand(p => Load(), p => CanLoad);
-           // UpdateCommand = new RelayCommand(p => Update(), p => IsSelectedDevice);
-         //   RemoveCommand = new RelayCommand(p => Remove(), p => IsSelectedDevice);
+            ContactsCommand = new RelayCommand(p => navigationService.Navigate("Contacts"));
+
+            // UpdateCommand = new RelayCommand(p => Update(), p => IsSelectedDevice);
+            //   RemoveCommand = new RelayCommand(p => Remove(), p => IsSelectedDevice);
             OnOffCommand = new RelayCommand(p => OnOff());
 
             IsConnected = true;
@@ -96,9 +74,7 @@ namespace Altkom.Motorola.ViewModels
 
         private void Load()
         {
-            // Devices = new ObservableCollection<Device>(devicesService.Get());
-
-          //  SelectedDevice = Devices.FirstOrDefault();
+            navigationService.Navigate("Devices", IsConnected);
         }
 
         private bool CanLoad => IsConnected;

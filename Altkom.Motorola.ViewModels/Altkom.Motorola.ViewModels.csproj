@@ -79,6 +79,7 @@
     <Compile Include="ContactsViewModel.cs" />
     <Compile Include="DevicesViewModel.cs" />
     <Compile Include="DeviceViewModel.cs" />
+    <Compile Include="ItemsViewModel.cs" />
     <Compile Include="ShellViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModelLocator.cs" />

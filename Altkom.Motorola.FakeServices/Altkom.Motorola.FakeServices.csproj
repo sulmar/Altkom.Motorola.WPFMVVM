@@ -1,17 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Bogus" Version="25.0.1" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Altkom.Motorola.Fakers\Altkom.Motorola.Fakers.csproj" />
     <ProjectReference Include="..\Altkom.Motorola.IServices\Altkom.Motorola.IServices.csproj" />
     <ProjectReference Include="..\Altkom.Motorola.Models\Altkom.Motorola.Models.csproj" />
   </ItemGroup>
-
 </Project>

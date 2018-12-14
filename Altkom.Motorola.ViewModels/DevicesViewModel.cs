@@ -33,9 +33,17 @@ namespace Altkom.Motorola.ViewModels
         }
 
 
-        public void Load()
+        public async void Load()
         {
-            Devices = new ObservableCollection<Device>(devicesService.Get());
+            // Devices = new ObservableCollection<Device>(devicesService.Get());
+
+
+            var devices = await devicesService.GetAsync();
+
+            Devices = new ObservableCollection<Device>(devices);
+
+
+
         }
 
 

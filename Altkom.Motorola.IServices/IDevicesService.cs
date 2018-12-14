@@ -1,6 +1,7 @@
 ﻿using Altkom.Motorola.Models;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Altkom.Motorola.IServices
 {
@@ -11,5 +12,9 @@ namespace Altkom.Motorola.IServices
         void Add(Device device);
         void Update(Device device);
         void Remove(int id);
+
+        Task<ICollection<Device>> GetAsync();
+
+
     }
 }

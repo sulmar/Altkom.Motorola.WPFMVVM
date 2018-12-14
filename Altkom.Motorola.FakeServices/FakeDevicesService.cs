@@ -4,6 +4,8 @@ using Altkom.Motorola.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Altkom.Motorola.FakeServices
 {
@@ -20,16 +22,23 @@ namespace Altkom.Motorola.FakeServices
         public void Add(Device device)
         {
             devices.Add(device);
-        }
+        }        
 
         public ICollection<Device> Get()
         {
+            Thread.Sleep(TimeSpan.FromSeconds(5));
+
             return devices;
         }
 
         public Device Get(int id)
         {
             return devices.SingleOrDefault(d => d.Id == id);
+        }
+
+        public Task<ICollection<Device>> GetAsync()
+        {
+            return Task.Run(() => Get());
         }
 
         public void Remove(int id)
