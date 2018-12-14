@@ -64,6 +64,15 @@
     <Compile Include="Bindings\ElementBindingView.xaml.cs">
       <DependentUpon>ElementBindingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Navigations\PageAView.xaml.cs">
+      <DependentUpon>PageAView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigations\PageBView.xaml.cs">
+      <DependentUpon>PageBView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigations\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Styles\StyleView.xaml.cs">
       <DependentUpon>StyleView.xaml</DependentUpon>
     </Compile>
@@ -94,6 +103,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Navigations\PageAView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Navigations\PageBView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Navigations\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Panels\CanvasView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

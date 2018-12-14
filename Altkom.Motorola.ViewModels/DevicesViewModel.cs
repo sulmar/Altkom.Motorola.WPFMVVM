@@ -13,7 +13,6 @@ namespace Altkom.Motorola.ViewModels
     {
         private readonly IDevicesService devicesService;
 
-
         private ObservableCollection<Device> _devices;
 
         public DevicesViewModel(IDevicesService devicesService)

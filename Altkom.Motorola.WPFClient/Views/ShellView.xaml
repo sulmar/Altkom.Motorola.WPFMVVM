@@ -102,7 +102,7 @@
 
                     <Border Grid.Column="0">
                         
-                        <Frame Source="DevicesView.xaml" />
+                        <Frame x:Name="LeftFrame" Source="DevicesView.xaml" />
 
                     </Border>
 
